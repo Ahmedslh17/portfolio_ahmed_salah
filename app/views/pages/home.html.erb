@@ -2,7 +2,7 @@
 
   <!-- Effets de lueurs d'arrière-plan -->
   <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <!-- Barre de navigation -->
   <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10">
@@ -10,7 +10,7 @@
       <div class="flex items-center space-x-3">
         <!-- Logo stylisé AS -->
         <%= image_tag "logoas.jpg", alt: "AS Logo", class: "w-10 h-10 rounded-xl object-cover border border-cyan-500/50 shadow-md" %>
-        <span class="text-xl font-bold tracking-tight" style="background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <span class="text-xl font-bold tracking-tight" style="background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 70%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
           Ahmed SALAH
         </span>
       </div>
@@ -33,7 +33,7 @@
           <span>📄 Mon CV</span>
         </a>
 
-        <!-- Bouton Me contacter bleu/cyan lumineux -->
+        <!-- Bouton Me contacter -->
         <a href="#contact" class="px-5 py-2.5 rounded-xl text-sm font-bold text-slate-950 hover:scale-[1.03] transition-all duration-200" style="background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%); box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4);">
           Me contacter
         </a>
@@ -45,9 +45,9 @@
   <section id="accueil" class="relative pt-20 pb-20 px-6">
     <div class="max-w-5xl mx-auto text-center flex flex-col items-center">
       
-      <!-- Photo de profil avec l'auréole lumineuse -->
+      <!-- Photo de profil avec auréole : 70% Bleu/Cyan et 30% Violet -->
       <div class="relative mb-8 group">
-        <div class="absolute -inset-1.5 rounded-full blur-md opacity-100 group-hover:scale-105 transition duration-300" style="background: linear-gradient(135deg, #22d3ee 0%, #d946ef 50%, #8b5cf6 100%);"></div>
+        <div class="absolute -inset-1.5 rounded-full blur-md opacity-100 group-hover:scale-105 transition duration-300" style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 70%, #a855f7 100%);"></div>
         <%= image_tag "profile.jpg", alt: "Ahmed SALAH", class: "relative w-36 h-36 rounded-full object-cover border-2 border-slate-900 shadow-2xl" %>
       </div>
 
@@ -56,10 +56,10 @@
         <span class="text-xs font-semibold uppercase tracking-wider text-slate-300">Développeur Web & Mobile</span>
       </div>
 
-      <!-- Grand titre principal avec dégradé garanti (cyan / sky / purple) -->
+      <!-- Grand titre : 70% Bleu Vif / Cyan -> 30% Violet Neon LED -->
       <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
         Bonjour, je suis <br/>
-        <span style="background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;">
+        <span style="background: linear-gradient(135deg, #38bdf8 0%, #2563eb 70%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.6)) drop-shadow(0 0 40px rgba(168, 85, 247, 0.3));">
           Ahmed SALAH
         </span>
       </h1>
