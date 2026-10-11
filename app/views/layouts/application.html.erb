@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Portfolio Ahmed Salah" %></title>
+    <title><%= content_for(:title) || "Ahmed SALAH - Portfolio & Fondateur de Kreatix Studio" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Portfolio Ahmed Salah">
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="Développeur Web & Mobile Ruby on Rails, fondateur de Kreatix Studio. Découvrez mes réalisations SaaS et mon parcours.">
+
+    <!-- Meta balises Open Graph pour LinkedIn, WhatsApp, Facebook -->
+    <meta property="og:title" content="Ahmed SALAH - Portfolio & Fondateur de Kreatix Studio" />
+    <meta property="og:description" content="Développeur Web & Mobile Ruby on Rails. Découvrez mes projets, SaaS et mon parcours." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ahmedsalah.fr" />
+    <!-- Utilise ton logo ou ta photo de profil comme aperçu -->
+    <meta property="og:image" content="<%= image_url('profile.jpg') %>" />
+
+    <!-- Meta balises pour Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmed SALAH - Portfolio & Fondateur de Kreatix Studio">
+    <meta name="twitter:description" content="Développeur Web & Mobile Ruby on Rails. Découvrez mes projets, SaaS et mon parcours.">
+    <meta name="twitter:image" content="<%= image_url('profile.jpg') %>">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= yield :head %>
 
-    <!-- Ajout du CDN Tailwind pour un design ultra-rapide et magnifique -->
+    <!-- Ajout du CDN Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="icon" href="/icon.png" type="image/png">
@@ -23,7 +39,6 @@
   </head>
 
   <body class="bg-slate-950 text-slate-100">
-    <!-- On retire les classes restrictives pour laisser le portfolio s'afficher en plein écran -->
     <%= yield %>
   </body>
 </html>
