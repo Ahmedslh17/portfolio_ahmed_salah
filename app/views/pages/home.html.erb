@@ -1,429 +1,214 @@
 <div class="min-h-screen bg-slate-950 text-slate-100 font-sans relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
 
- 
-
   <!-- Effets de lueurs d'arrière-plan -->
-
-  <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-  <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
   <!-- Barre de navigation -->
-
   <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/70 border-b border-white/10">
-
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-
       <div class="flex items-center space-x-3">
-
-        <!-- Logo stylisé AS en haut à gauche -->
-
+        <!-- Logo stylisé AS -->
         <%= image_tag "logoas.jpg", alt: "AS Logo", class: "w-10 h-10 rounded-xl object-cover border border-cyan-500/50 shadow-md" %>
-
-        <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-500 bg-clip-text text-transparent">
+        <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-400 bg-clip-text text-transparent">
           Ahmed SALAH
         </span>
-
       </div>
-
-
 
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-
         <a href="#accueil" class="hover:text-cyan-400 transition-colors">Accueil</a>
-
         <a href="#projets" class="hover:text-cyan-400 transition-colors">Mes SaaS</a>
-
         <a href="#parcours" class="hover:text-cyan-400 transition-colors">Parcours & CV</a>
-
         <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
-
       </nav>
 
-
-
       <div class="flex items-center space-x-4">
-
-        <!-- Lien vers Kreatix Studio -->
-
         <a href="<%= kreatix_path %>" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-sm font-medium text-cyan-300 transition-all">
-
           <span>✨ Kreatix Studio</span>
-
         </a>
-
-
-
-        <!-- Bouton de téléchargement rapide de CV dans le header -->
 
         <a href="/cv_ahmed_salah.pdf" download target="_blank" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium text-slate-200 transition-all">
-
           <span>📄 Mon CV</span>
-
         </a>
 
-
-
-        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all duration-200">
-
+        <!-- Bouton Me contacter vif -->
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold text-sm shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-[1.02] transition-all duration-200">
           Me contacter
-
         </a>
-
       </div>
-
     </div>
-
   </header>
 
-
-
-  <!-- Section Accueil (Hero avec la photo principale unique) -->
-
+  <!-- Section Accueil (Hero) -->
   <section id="accueil" class="relative pt-20 pb-20 px-6">
-
     <div class="max-w-5xl mx-auto text-center flex flex-col items-center">
-
-     
-
-      <!-- Photo de profil principale -->
-
+      
+      <!-- Photo de profil avec le halo violet/cyan réactivé -->
       <div class="relative mb-8 group">
-
-        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-
+        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-purple-500 rounded-full blur-md opacity-100 group-hover:scale-105 transition duration-300"></div>
         <%= image_tag "profile.jpg", alt: "Ahmed SALAH", class: "relative w-36 h-36 rounded-full object-cover border-2 border-slate-900 shadow-2xl" %>
-
       </div>
-
-
 
       <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-inner">
-
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-
-        <span class="text-xs font-semibold uppercase tracking-wider text-slate-300">Développeur Web & Mobile </span>
-
+        <span class="text-xs font-semibold uppercase tracking-wider text-slate-300">Développeur Web & Mobile</span>
       </div>
 
-
-
+      <!-- Titre principal avec le dégradé Cyan / Sky / Purple bien vif -->
       <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-
         Bonjour, je suis <br/>
-
-        <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-
+        <span class="bg-gradient-to-r from-cyan-300 via-sky-300 to-purple-400 bg-clip-text text-transparent">
           Ahmed SALAH
-
         </span>
-
       </h1>
 
-
-
       <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-
         Diplômé du Wagon et passionné par la création de produits digitaux, je conçois et développe des applications web et SaaS sur mesure (Ruby on Rails, JavaScript, SQL).
-
       </p>
 
-
-
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-
-        <a href="#projets" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold shadow-xl shadow-cyan-500/20 transition-all">
-
+        <a href="#projets" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold shadow-xl shadow-cyan-400/30 transition-all">
           Découvrir mes SaaS
-
         </a>
-
         <a href="/cv_ahmed_salah.pdf" download target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 font-semibold transition-all flex items-center justify-center space-x-2">
-
           <span>Télécharger mon CV</span>
-
           <span>↓</span>
-
         </a>
-
       </div>
-
     </div>
-
   </section>
-
-
 
   <!-- Section Projets & SaaS -->
-
   <section id="projets" class="py-24 px-6 relative border-t border-white/10 bg-slate-900/40">
-
     <div class="max-w-7xl mx-auto">
-
       <div class="text-center max-w-2xl mx-auto mb-16">
-
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Mes Réalisations & SaaS</h2>
-
         <p class="text-slate-400">Applications conçues de A à Z : facturation, organisation et modules IA.</p>
-
       </div>
-
-
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-       
-
         <!-- SaaS 1 : mes2vis.com -->
-
         <div class="rounded-3xl bg-white/[0.03] border border-white/10 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group flex flex-col justify-between">
-
           <a href="https://mes2vis.com" target="_blank" class="relative overflow-hidden border-b border-white/10 h-64 bg-slate-900 block">
-
             <%= image_tag "mes2vis.png", alt: "mes2vis.com", class: "w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" %>
-
           </a>
-
           <div class="p-8">
-
             <div class="flex items-center justify-between mb-4">
-
               <a href="https://mes2vis.com" target="_blank" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors flex items-center space-x-2">
-
                 <span>mes2vis.com</span>
-
                 <span class="text-xs">↗</span>
-
               </a>
-
               <span class="px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">SaaS Facturation</span>
-
             </div>
-
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-
               Outil ultra-simple pour micro-entrepreneurs : génération de factures pro en 30 secondes, export PDF, suivi des paiements (payé / non payé) et abonnements Stripe.
-
             </p>
-
             <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-cyan-300">
-
               <span class="px-2.5 py-1 rounded-md bg-cyan-500/10">Ruby on Rails</span>
-
               <span class="px-2.5 py-1 rounded-md bg-cyan-500/10">PostgreSQL</span>
-
               <span class="px-2.5 py-1 rounded-md bg-cyan-500/10">Stripe</span>
-
             </div>
-
           </div>
-
         </div>
-
-
 
         <!-- SaaS 2 : HappyHub -->
-
         <div class="rounded-3xl bg-white/[0.03] border border-white/10 hover:border-purple-500/50 transition-all duration-300 overflow-hidden group flex flex-col justify-between">
-
           <a href="https://happyhub.fr" target="_blank" class="relative overflow-hidden border-b border-white/10 h-64 bg-slate-900 block">
-
             <%= image_tag "happyhub.jpg", alt: "HappyHub", class: "w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" %>
-
           </a>
-
           <div class="p-8">
-
             <div class="flex items-center justify-between mb-4">
-
               <a href="https://happyhub.fr" target="_blank" class="text-2xl font-bold text-white hover:text-purple-400 transition-colors flex items-center space-x-2">
-
                 <span>happyhub.fr</span>
-
                 <span class="text-xs">↗</span>
-
               </a>
-
               <span class="px-3 py-1 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">SaaS Espace Personnel</span>
-
             </div>
-
             <p class="text-slate-400 text-sm leading-relaxed mb-6">
-
               Plateforme d'organisation personnelle combinant planning hebdomadaire, suivi d'habitudes, statistiques d'humeur/bonheur et assistant IA intégré.
-
             </p>
-
             <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-purple-300">
-
               <span class="px-2.5 py-1 rounded-md bg-purple-500/10">Ruby on Rails</span>
-
               <span class="px-2.5 py-1 rounded-md bg-purple-500/10">Intégration IA</span>
-
               <span class="px-2.5 py-1 rounded-md bg-purple-500/10">Tailwind CSS</span>
-
             </div>
-
           </div>
-
         </div>
-
-
-
       </div>
-
     </div>
-
   </section>
-
-
 
   <!-- Section Parcours / CV Téléchargeable -->
-
   <section id="parcours" class="py-24 px-6 relative border-t border-white/10">
-
     <div class="max-w-4xl mx-auto text-center">
-
       <div class="max-w-xl mx-auto mb-12">
-
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Mon Parcours Professionnel</h2>
-
         <p class="text-slate-400">Retrouvez le détail de mes formations, compétences techniques et expériences en informatique.</p>
-
       </div>
-
-
 
       <div class="p-10 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center">
-
         <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-6">
-
           📄
-
         </div>
-
         <h3 class="text-2xl font-bold mb-3">Curriculum Vitae</h3>
-
         <p class="text-slate-400 max-w-md mx-auto text-sm mb-8 leading-relaxed">
-
           Téléchargez mon CV au format PDF pour consulter en détail mes expériences (La Poste IT, Le Wagon Paris) et mes compétences techniques.
-
         </p>
-
-        <a href="/cv_ahmed_salah.pdf" download target="_blank" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold shadow-xl shadow-cyan-500/20 hover:scale-105 transition-all">
-
+        <a href="/cv_ahmed_salah.pdf" download target="_blank" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold shadow-xl shadow-cyan-400/20 hover:scale-105 transition-all">
           Télécharger mon CV complet (PDF)
-
         </a>
-
       </div>
-
     </div>
-
   </section>
-
-
 
   <!-- Section Contact -->
-
   <section id="contact" class="py-24 px-6 relative border-t border-white/10 bg-slate-900/40">
-
     <div class="max-w-4xl mx-auto">
-
       <div class="text-center max-w-xl mx-auto mb-16">
-
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Me Contacter</h2>
-
         <p class="text-slate-400">Un projet, une opportunité ou une question ? Envoyez-moi un message.</p>
-
       </div>
-
-
 
       <% if flash[:notice] %>
-
         <div class="mb-8 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-center font-medium">
-
           <%= flash[:notice] %>
-
         </div>
-
       <% end %>
 
-
-
       <div class="p-8 md:p-12 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl">
-
         <%= form_with url: contact_portfolio_submit_path, method: :post, local: true, class: "space-y-6" do |f| %>
-
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
             <div>
-
               <label class="block text-sm font-medium text-slate-300 mb-2">Votre Nom</label>
-
-              <%= text_field_tag :name, nil, required: true, placeholder: "Votre nom", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-500 focus:outline-none text-white transition-colors" %>
-
+              <%= text_field_tag :name, nil, required: true, placeholder: "Votre nom", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors" %>
             </div>
-
             <div>
-
               <label class="block text-sm font-medium text-slate-300 mb-2">Votre Email</label>
-
-              <%= email_field_tag :email, nil, required: true, placeholder: "ahmed@exemple.com", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-500 focus:outline-none text-white transition-colors" %>
-
+              <%= email_field_tag :email, nil, required: true, placeholder: "ahmed@exemple.com", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors" %>
             </div>
-
           </div>
 
-
-
           <div>
-
             <label class="block text-sm font-medium text-slate-300 mb-2">Sujet</label>
-
-            <%= select_tag :service, options_for_select([['Opportunité d\'emploi / Mission', 'Emploi'], ['Développement de projet / SaaS', 'Projet'], ['Autre demande', 'Autre']]), class: "w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 focus:border-cyan-500 focus:outline-none text-white transition-colors" %>
-
+            <%= select_tag :service, options_for_select([['Opportunité d\'emploi / Mission', 'Emploi'], ['Développement de projet / SaaS', 'Projet'], ['Autre demande', 'Autre']]), class: "w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors" %>
           </div>
-
-
 
           <div>
-
             <label class="block text-sm font-medium text-slate-300 mb-2">Votre Message</label>
-
-            <%= text_area_tag :message, nil, rows: 5, required: true, placeholder: "Écrivez votre message...", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-500 focus:outline-none text-white transition-colors resize-none" %>
-
+            <%= text_area_tag :message, nil, rows: 5, required: true, placeholder: "Écrivez votre message...", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors resize-none" %>
           </div>
 
-
-
-          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold shadow-xl shadow-cyan-500/20 hover:opacity-95 transition-opacity">
-
+          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 font-bold shadow-xl shadow-cyan-400/20 hover:opacity-95 transition-opacity">
             Envoyer le message
-
           </button>
-
         <% end %>
-
       </div>
-
     </div>
-
   </section>
 
-
-
   <!-- Pied de page -->
-
   <footer class="py-12 border-t border-white/10 text-center text-sm text-slate-500">
-
     <p>© <%= Time.now.year %> Ahmed SALAH. Tous droits réservés. Développé avec Ruby on Rails & Tailwind CSS.</p>
-
   </footer>
 
-
-
-</div> 
+</div>
