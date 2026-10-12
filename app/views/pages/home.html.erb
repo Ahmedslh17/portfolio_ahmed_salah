@@ -1,217 +1,100 @@
-<div class="min-h-screen bg-slate-950 text-slate-100 font-sans relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Salah - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
 
-  <!-- Effets de lueurs d'arrière-plan -->
-  <div class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl pointer-events-none"></div>
-
-  <!-- Barre de navigation -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-slate-950/80 border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <!-- Logo stylisé AS -->
-        <%= image_tag "logoas.jpg", alt: "AS Logo", class: "w-10 h-10 rounded-xl object-cover border border-cyan-500/50 shadow-md" %>
-        <span class="text-xl font-bold tracking-tight" style="background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-          Ahmed SALAH
-        </span>
-      </div>
-
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
-        <a href="#accueil" class="hover:text-cyan-400 transition-colors">Accueil</a>
-        <a href="#projets" class="hover:text-cyan-400 transition-colors">Mes SaaS</a>
-        <a href="#parcours" class="hover:text-cyan-400 transition-colors">Parcours & CV</a>
-        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+  <!-- En-tête / Navigation -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold tracking-tight text-indigo-400">Ahmed Salah</a>
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#about" class="hover:text-indigo-400 transition">À propos</a>
+        <a href="#services" class="hover:text-indigo-400 transition">Services</a>
+        <a href="#projects" class="hover:text-indigo-400 transition">Projets</a>
+        <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
       </nav>
-
-      <div class="flex items-center space-x-4">
-        <!-- Lien vers Kreatix Studio -->
-        <a href="<%= kreatix_path %>" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-sm font-medium text-cyan-300 transition-all">
-          <span>✨ Kreatix Studio</span>
-        </a>
-
-        <!-- Bouton Mon CV -->
-        <a href="/cv_ahmed_salah.pdf" download target="_blank" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium text-slate-200 transition-all">
-          <span>📄 Mon CV</span>
-        </a>
-
-        <!-- Bouton Me contacter -->
-        <a href="#contact" class="px-5 py-2.5 rounded-xl text-sm font-bold text-slate-950 hover:scale-[1.03] transition-all duration-200" style="background: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%); box-shadow: 0 8px 20px -4px rgba(56, 189, 248, 0.35);">
-          Me contacter
-        </a>
-      </div>
     </div>
   </header>
 
-  <!-- Section Accueil (Hero) -->
-  <section id="accueil" class="relative pt-20 pb-20 px-6">
-    <div class="max-w-5xl mx-auto text-center flex flex-col items-center">
-      
-      <!-- Photo de profil avec auréole progressive 50% bleu / 50% violet -->
-      <div class="relative mb-8 group">
-        <div class="absolute -inset-1.5 rounded-full blur-sm opacity-90 group-hover:scale-105 transition duration-300" style="background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);"></div>
-        <%= image_tag "profile.jpg", alt: "Ahmed SALAH", class: "relative w-36 h-36 rounded-full object-cover border-2 border-slate-900 shadow-2xl" %>
-      </div>
-
-      <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-inner">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="text-xs font-semibold uppercase tracking-wider text-slate-300">Développeur Web & Mobile</span>
-      </div>
-
-      <!-- Grand titre : 50% Bleu Ciel / 50% Violet Clair -->
-      <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
-        Bonjour, je suis <br/>
-        <span style="background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 45%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.3));">
-          Ahmed SALAH
-        </span>
+  <!-- Section Principale / Hero -->
+  <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center justify-between">
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+        Développeur & <span class="text-indigo-400">Créateur de Solutions</span>
       </h1>
-
-      <!-- Description incluant Kreatix Studio -->
-      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-        Diplômé du Wagon et <strong class="text-slate-200 font-semibold">fondateur de Kreatix Studio</strong>, je conçois et développe des applications web et SaaS sur mesure (Ruby on Rails, JavaScript, SQL).
+      <p class="text-lg text-slate-400">
+        Bienvenue sur mon portfolio. Je conçois des applications web modernes, performantes et sur mesure.
       </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-        <a href="#projets" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold shadow-xl shadow-cyan-400/30 transition-all">
-          Découvrir mes SaaS
-        </a>
-        <a href="/cv_ahmed_salah.pdf" download target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 font-semibold transition-all flex items-center justify-center space-x-2">
-          <span>Télécharger mon CV</span>
-          <span>↓</span>
-        </a>
+      <div class="flex justify-center md:justify-start space-x-4">
+        <a href="#contact" class="bg-indigo-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-indigo-500 transition shadow-lg shadow-indigo-600/30">Me contacter</a>
+        <a href="#projects" class="bg-slate-900 border border-slate-700 text-slate-200 font-medium px-6 py-3 rounded-lg hover:bg-slate-800 transition">Voir mes projets</a>
       </div>
     </div>
   </section>
 
-  <!-- Section Projets & SaaS -->
-  <section id="projets" class="py-24 px-6 relative border-t border-white/10 bg-slate-900/40">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Mes Réalisations & SaaS</h2>
-        <p class="text-slate-400">Applications conçues de A à Z : facturation, organisation et modules IA.</p>
+  <!-- Section Services -->
+  <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Mes Domaines d'Expertise</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
+        <h3 class="text-xl font-semibold text-indigo-400 mb-3">Développement Web</h3>
+        <p class="text-slate-400">Applications sur mesure avec Ruby on Rails, JavaScript et des interfaces fluides.</p>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- SaaS 1 : mes2vis.com -->
-        <div class="rounded-3xl bg-white/[0.03] border border-white/10 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group flex flex-col justify-between">
-          <a href="https://mes2vis.com" target="_blank" class="relative overflow-hidden border-b border-white/10 h-64 bg-slate-900 block">
-            <%= image_tag "mes2vis.png", alt: "mes2vis.com", class: "w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" %>
-          </a>
-          <div class="p-8">
-            <div class="flex items-center justify-between mb-4">
-              <a href="https://mes2vis.com" target="_blank" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors flex items-center space-x-2">
-                <span>mes2vis.com</span>
-                <span class="text-xs">↗</span>
-              </a>
-              <span class="px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">SaaS Facturation</span>
-            </div>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Outil ultra-simple pour micro-entrepreneurs : génération de factures pro en 30 secondes, export PDF, suivi des paiements (payé / non payé) et abonnements Stripe.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-cyan-300">
-              <span class="px-2.5 py-1 rounded-md bg-cyan-500/10">Ruby on Rails</span>
-              <span class="px-2.5 py-1 rounded-md bg-cyan-500/10">PostgreSQL</span>
-              <span class="px-2.5 py-1 rounded-md bg-cyan-500/10">Stripe</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- SaaS 2 : HappyHub -->
-        <div class="rounded-3xl bg-white/[0.03] border border-white/10 hover:border-purple-500/50 transition-all duration-300 overflow-hidden group flex flex-col justify-between">
-          <a href="https://happyhub.fr" target="_blank" class="relative overflow-hidden border-b border-white/10 h-64 bg-slate-900 block">
-            <%= image_tag "happyhub.jpg", alt: "HappyHub", class: "w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" %>
-          </a>
-          <div class="p-8">
-            <div class="flex items-center justify-between mb-4">
-              <a href="https://happyhub.fr" target="_blank" class="text-2xl font-bold text-white hover:text-purple-400 transition-colors flex items-center space-x-2">
-                <span>happyhub.fr</span>
-                <span class="text-xs">↗</span>
-              </a>
-              <span class="px-3 py-1 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">SaaS Espace Personnel</span>
-            </div>
-            <p class="text-slate-400 text-sm leading-relaxed mb-6">
-              Plateforme d'organisation personnelle combinant planning hebdomadaire, suivi d'habitudes, statistiques d'humeur/bonheur et assistant IA intégré.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-purple-300">
-              <span class="px-2.5 py-1 rounded-md bg-purple-500/10">Ruby on Rails</span>
-              <span class="px-2.5 py-1 rounded-md bg-purple-500/10">Intégration IA</span>
-              <span class="px-2.5 py-1 rounded-md bg-purple-500/10">Tailwind CSS</span>
-            </div>
-          </div>
-        </div>
+      <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
+        <h3 class="text-xl font-semibold text-indigo-400 mb-3">Intégration & API</h3>
+        <p class="text-slate-400">Connexion de services tiers, architectures robustes et sécurisées.</p>
+      </div>
+      <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
+        <h3 class="text-xl font-semibold text-indigo-400 mb-3">Optimisation VPS</h3>
+        <p class="text-slate-400">Administration système, déploiement Linux, Puma et configurations de production.</p>
       </div>
     </div>
   </section>
 
-  <!-- Section Parcours / CV -->
-  <section id="parcours" class="py-24 px-6 relative border-t border-white/10">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="max-w-xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Mon Parcours Professionnel</h2>
-        <p class="text-slate-400">Retrouvez le détail de mes formations, compétences techniques et expériences en informatique.</p>
+  <!-- Section Projets -->
+  <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Projets Récents</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+        <h3 class="text-xl font-bold text-white mb-2">Portfolio Principal</h3>
+        <p class="text-slate-400 mb-4">Vitrine professionnelle avec administration intégrée et suivi des visites.</p>
       </div>
+      <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl">
+        <h3 class="text-xl font-bold text-white mb-2">Kreatix Studio</h3>
+        <p class="text-slate-400 mb-4">Plateforme de services créatifs et numériques.</p>
+      </div>
+    </div>
+  </section>
 
-      <div class="p-10 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl flex flex-col items-center justify-center">
-        <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-2xl mb-6">
-          📄
-        </div>
-        <h3 class="text-2xl font-bold mb-3">Curriculum Vitae</h3>
-        <p class="text-slate-400 max-w-md mx-auto text-sm mb-8 leading-relaxed">
-          Téléchargez mon CV au format PDF pour consulter en détail mes expériences (La Poste IT, Le Wagon Paris) et mes compétences techniques.
-        </p>
-        <a href="/cv_ahmed_salah.pdf" download target="_blank" class="px-8 py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold shadow-xl shadow-cyan-400/20 hover:scale-105 transition-all">
-          Télécharger mon CV complet (PDF)
+  <!-- Section Contact (Bouton e-mail direct vers ahmed.slh1707@gmail.com) -->
+  <section id="contact" class="py-20 px-6 max-w-3xl mx-auto text-center">
+    <div class="bg-slate-900 border border-slate-800 p-10 rounded-2xl shadow-xl space-y-6">
+      <h2 class="text-3xl font-bold text-white">Travaillons ensemble</h2>
+      <p class="text-slate-400 text-lg">
+        Une question, un projet ou une opportunité ? Écrivez-moi directement par e-mail, je vous répondrai rapidement.
+      </p>
+      <div>
+        <a href="mailto:ahmed.slh1707@gmail.com?subject=Contact%20depuis%20le%20Portfolio" 
+           class="inline-flex items-center justify-center bg-indigo-600 text-white font-semibold px-8 py-4 rounded-xl hover:bg-indigo-500 transition shadow-lg shadow-indigo-600/30 text-lg">
+          <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          M'envoyer un e-mail
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- Section Contact -->
-  <section id="contact" class="py-24 px-6 relative border-t border-white/10 bg-slate-900/40">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center max-w-xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Me Contacter</h2>
-        <p class="text-slate-400">Un projet, une opportunité ou une question ? Envoyez-moi un message.</p>
-      </div>
-
-      <% if flash[:notice] %>
-        <div class="mb-8 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-center font-medium">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
-
-      <div class="p-8 md:p-12 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl shadow-2xl">
-        <%= form_with url: contact_portfolio_submit_path, method: :post, local: true, class: "space-y-6" do |f| %>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-sm font-medium text-slate-300 mb-2">Votre Nom</label>
-              <%= text_field_tag :name, nil, required: true, placeholder: "Votre nom", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors" %>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-300 mb-2">Votre Email</label>
-              <%= email_field_tag :email, nil, required: true, placeholder: "ahmed@exemple.com", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors" %>
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium text-slate-300 mb-2">Sujet</label>
-            <%= select_tag :service, options_for_select([['Opportunité d\'emploi / Mission', 'Emploi'], ['Développement de projet / SaaS', 'Projet'], ['Autre demande', 'Autre']]), class: "w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors" %>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium text-slate-300 mb-2">Votre Message</label>
-            <%= text_area_tag :message, nil, rows: 5, required: true, placeholder: "Écrivez votre message...", class: "w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-cyan-400 focus:outline-none text-white transition-colors resize-none" %>
-          </div>
-
-          <button type="submit" class="w-full py-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold shadow-xl shadow-cyan-400/20 hover:opacity-95 transition-opacity">
-            Envoyer le message
-          </button>
-        <% end %>
-      </div>
+      <p class="text-xs text-slate-500">Cela ouvrira votre application de messagerie (ahmed.slh1707@gmail.com).</p>
     </div>
   </section>
 
   <!-- Pied de page -->
-  <footer class="py-12 border-t border-white/10 text-center text-sm text-slate-500">
-    <p>© <%= Time.now.year %> Ahmed SALAH. Tous droits réservés. Développé avec Ruby on Rails & Tailwind CSS.</p>
+  <footer class="py-8 border-t border-slate-800 text-center text-sm text-slate-500">
+    <p>&copy; 2026 Ahmed Salah. Tous droits réservés.</p>
   </footer>
 
-</div>
+</body>
+</html>
