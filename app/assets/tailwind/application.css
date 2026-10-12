@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* Force un dégradé violet/cyan net et éclatant */
+.text-gradient-pro {
+  background: linear-gradient(135deg, #22d3ee 0%, #818cf8 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Force l'effet néon du bouton Me contacter */
+.btn-contact-neon {
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  color: #020617;
+  font-weight: 700;
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4);
+}

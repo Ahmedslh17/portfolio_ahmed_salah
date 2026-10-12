@@ -1,7 +1,19 @@
-<div class="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-slate-900 selection:text-white">
+<div class="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-slate-900 selection:text-white relative overflow-x-hidden" data-turbo="false">
+
+  <!-- ================================================================= -->
+  <!-- STYLE 3 : MESH GRADIENT VAPOREUX & AURAS PASTELES -->
+  <!-- ================================================================= -->
+  <!-- 1. Vague lumineuse principale haut (Cyan / Bleu d'eau) -->
+  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-r from-sky-200/60 via-indigo-200/50 to-purple-200/60 rounded-full blur-[130px] pointer-events-none"></div>
+
+  <!-- 2. Halo latéral gauche (Purple Glow) -->
+  <div class="absolute top-1/2 -left-40 w-[600px] h-[600px] bg-purple-200/40 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <!-- 3. Halo latéral droit (Cyan Glow) -->
+  <div class="absolute top-3/4 -right-40 w-[600px] h-[600px] bg-sky-200/40 rounded-full blur-[140px] pointer-events-none"></div>
 
   <!-- Barre de navigation claire -->
-  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200">
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-slate-200/70 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
       <!-- Logo Kreatix Studio -->
@@ -12,18 +24,18 @@
         </span>
       </a>
 
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
         <a href="#offres" class="hover:text-slate-900 transition-colors">Nos Services</a>
         <a href="#devis" class="hover:text-slate-900 transition-colors">Tarifs & Devis</a>
         <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
       </nav>
 
       <div class="flex items-center space-x-4">
-        <!-- Lien de retour vers ton portfolio personnel -->
-        <a href="<%= root_path %>" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">
+        <!-- Lien de retour vers le portfolio personnel -->
+        <a href="<%= root_path %>" class="text-sm font-semibold text-slate-500 hover:text-slate-900 transition-colors">
           ← Portfolio Ahmed
         </a>
-        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-medium text-sm shadow-md transition-all">
+        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-md transition-all">
           Nous contacter
         </a>
       </div>
@@ -31,14 +43,14 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="py-24 px-6 bg-white border-b border-slate-100">
-    <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+  <section class="py-24 px-6 relative">
+    <div class="max-w-4xl mx-auto text-center flex flex-col items-center relative z-10">
       
       <div class="mb-8">
-        <%= image_tag "kreatix_logo.jpg", alt: "Kreatix Studio Logo", class: "w-28 h-28 mx-auto rounded-2xl object-contain border border-slate-200 p-2 shadow-sm" %>
+        <%= image_tag "kreatix_logo.jpg", alt: "Kreatix Studio Logo", class: "w-28 h-28 mx-auto rounded-2xl object-contain border border-white/80 p-2 shadow-xl bg-white/90 backdrop-blur-md" %>
       </div>
 
-      <span class="px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold uppercase tracking-wider mb-6">
+      <span class="px-4 py-1.5 rounded-full bg-white/80 border border-slate-200/80 text-slate-800 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm backdrop-blur-md">
         Studio de Développement & Création Digitale
       </span>
 
@@ -46,46 +58,46 @@
         Propulsez votre projet avec des solutions sur mesure.
       </h1>
 
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p class="text-lg text-slate-700 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
         Kreatix Studio conçoit des sites web modernes et des applications performantes pour les entrepreneurs et les entreprises. 
         Contactez-nous directement à <strong class="text-slate-900">studiokreatix@gmail.com</strong>.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-        <a href="#devis" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-lg transition-all">
+        <a href="#devis" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-xl shadow-slate-900/10 transition-all">
           Voir nos offres & devis
         </a>
-        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold transition-all">
-          Envoyer un message
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/90 hover:bg-white text-slate-800 border border-slate-200 font-bold shadow-md transition-all">
+          Envoyer un e-mail
         </a>
       </div>
     </div>
   </section>
 
   <!-- Section Offres & Services -->
-  <section id="offres" class="py-24 px-6 bg-slate-50">
-    <div class="max-w-7xl mx-auto">
+  <section id="offres" class="py-24 px-6 relative border-t border-slate-200/60">
+    <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-slate-900 mb-4">Nos Domaines d'Expertise</h2>
-        <p class="text-slate-600">Des prestations de qualité professionnelle adaptées à vos besoins.</p>
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Nos Domaines d'Expertise</h2>
+        <p class="text-slate-600 font-medium">Des prestations de qualité professionnelle adaptées à vos besoins.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-900 font-bold text-xl mb-6">💻</div>
+        <div class="p-8 rounded-3xl bg-white/80 border border-white/80 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-slate-900 font-bold text-2xl mb-6 shadow-inner">💻</div>
           <h3 class="text-xl font-bold text-slate-900 mb-3">Sites Vitrines & Portfolios</h3>
           <p class="text-slate-600 text-sm leading-relaxed">Design élégant, intégration responsive et optimisation pour un référencement naturel performant.</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-900 font-bold text-xl mb-6">⚡</div>
+        <div class="p-8 rounded-3xl bg-white/80 border border-white/80 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-slate-900 font-bold text-2xl mb-6 shadow-inner">⚡</div>
           <h3 class="text-xl font-bold text-slate-900 mb-3">Applications Web & SaaS</h3>
           <p class="text-slate-600 text-sm leading-relaxed">Création de votre MVP ou plateforme logicielle complète (Ruby on Rails, bases de données, paiements sécurisés).</p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-slate-900 font-bold text-xl mb-6">🛠️</div>
+        <div class="p-8 rounded-3xl bg-white/80 border border-white/80 backdrop-blur-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-slate-900/10 border border-slate-900/20 flex items-center justify-center text-slate-900 font-bold text-2xl mb-6 shadow-inner">🛠️</div>
           <h3 class="text-xl font-bold text-slate-900 mb-3">Maintenance & Suivi IT</h3>
           <p class="text-slate-600 text-sm leading-relaxed">Corrections de bugs, mises à jour techniques, sécurité et assistance personnalisée sur votre infrastructure.</p>
         </div>
@@ -95,66 +107,66 @@
   </section>
 
   <!-- Section Devis & Tarifs Indicatifs -->
-  <section id="devis" class="py-24 px-6 bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto">
+  <section id="devis" class="py-24 px-6 relative border-t border-slate-200/60">
+    <div class="max-w-7xl mx-auto relative z-10">
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-slate-900 mb-4">Grille Tarifaire Indicative</h2>
-        <p class="text-slate-600">Des formules claires pour estimer votre budget au plus juste.</p>
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Grille Tarifaire Indicative</h2>
+        <p class="text-slate-600 font-medium">Des formules claires pour estimer votre budget au plus juste.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Formule 1 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+        <div class="p-8 rounded-3xl bg-white/80 border border-white/80 backdrop-blur-xl flex flex-col justify-between shadow-lg">
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-200 px-3 py-1 rounded-full">Essentiel</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-100 border border-slate-200/80 px-3 py-1 rounded-full">Essentiel</span>
             <h3 class="text-2xl font-extrabold text-slate-900 mt-4 mb-2">Site Vitrine</h3>
             <p class="text-slate-600 text-sm mb-6">Idéal pour présenter votre activité, vos services et attirer de nouveaux clients.</p>
-            <ul class="space-y-3 text-sm text-slate-700 mb-8">
+            <ul class="space-y-3 text-sm text-slate-700 mb-8 font-medium">
               <li>✓ Design sur mesure (Responsive)</li>
               <li>✓ Jusqu'à 5 pages clés</li>
-              <li>✓ Formulaire de contact intégré</li>
+              <li>✓ Intégration de vos réseaux & contact</li>
               <li>✓ Optimisation SEO de base</li>
             </ul>
           </div>
-          <a href="#contact" class="w-full py-3 rounded-xl bg-slate-900 text-white font-medium text-center hover:bg-slate-800 transition-colors">
+          <a href="#contact" class="w-full py-3.5 rounded-xl bg-slate-900 text-white font-bold text-center hover:bg-slate-800 transition-colors shadow-md">
             Demander un devis
           </a>
         </div>
 
-        <!-- Formule 2 -->
-        <div class="p-8 rounded-2xl bg-slate-900 text-white border border-slate-800 flex flex-col justify-between shadow-xl relative">
-          <div class="absolute -top-3 right-6 bg-cyan-400 text-slate-950 text-xs font-bold px-3 py-1 rounded-full">Populaire</div>
+        <!-- Formule 2 (SaaS / MVP) -->
+        <div class="p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 flex flex-col justify-between shadow-2xl relative scale-105">
+          <div class="absolute -top-3 right-6 bg-cyan-400 text-slate-950 text-xs font-bold px-3.5 py-1 rounded-full shadow-md">Populaire</div>
           <div>
             <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-white/10 px-3 py-1 rounded-full">Avancé</span>
             <h3 class="text-2xl font-extrabold text-white mt-4 mb-2">Application SaaS / MVP</h3>
             <p class="text-slate-300 text-sm mb-6">Pour transformer votre idée innovante en un produit fonctionnel et scalable.</p>
-            <ul class="space-y-3 text-sm text-slate-300 mb-8">
+            <ul class="space-y-3 text-sm text-slate-300 mb-8 font-medium">
               <li>✓ Architecture Ruby on Rails</li>
               <li>✓ Authentification & Base de données</li>
               <li>✓ Intégration de paiements (Stripe)</li>
               <li>✓ Tableau de bord personnalisé</li>
             </ul>
           </div>
-          <a href="#contact" class="w-full py-3 rounded-xl bg-cyan-500 text-slate-950 font-bold text-center hover:bg-cyan-400 transition-colors">
+          <a href="#contact" class="w-full py-3.5 rounded-xl bg-cyan-400 text-slate-950 font-extrabold text-center hover:bg-cyan-300 transition-colors shadow-lg shadow-cyan-400/20">
             Lancer mon SaaS
           </a>
         </div>
 
         <!-- Formule 3 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+        <div class="p-8 rounded-3xl bg-white/80 border border-white/80 backdrop-blur-xl flex flex-col justify-between shadow-lg">
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-slate-500 bg-slate-200 px-3 py-1 rounded-full">Sur Mesure</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-100 border border-slate-200/80 px-3 py-1 rounded-full">Sur Mesure</span>
             <h3 class="text-2xl font-extrabold text-slate-900 mt-4 mb-2">Sur-Mesure & Support</h3>
             <p class="text-slate-600 text-sm mb-6">Un accompagnement technique poussé ou de la maintenance corrective régulière.</p>
-            <ul class="space-y-3 text-sm text-slate-700 mb-8">
+            <ul class="space-y-3 text-sm text-slate-700 mb-8 font-medium">
               <li>✓ Audit et refonte technique</li>
               <li>✓ Résolution de bugs complexes</li>
               <li>✓ Fonctionnalités sur mesure</li>
               <li>✓ Suivi mensuel dédié</li>
             </ul>
           </div>
-          <a href="#contact" class="w-full py-3 rounded-xl bg-slate-900 text-white font-medium text-center hover:bg-slate-800 transition-colors">
+          <a href="#contact" class="w-full py-3.5 rounded-xl bg-slate-900 text-white font-bold text-center hover:bg-slate-800 transition-colors shadow-md">
             Nous contacter
           </a>
         </div>
@@ -163,55 +175,49 @@
     </div>
   </section>
 
-  <!-- Formulaire de contact Kreatix Studio -->
-  <section id="contact" class="py-24 px-6 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-slate-900 mb-3">Contactez Kreatix Studio</h2>
-        <p class="text-slate-600">
-          Écrivez-nous directement à <a href="mailto:studiokreatix@gmail.com" class="font-semibold text-slate-900 underline">studiokreatix@gmail.com</a> ou remplissez le formulaire ci-dessous :
+  <!-- Section Contact Kreatix Studio -->
+  <section id="contact" class="py-24 px-6 relative border-t border-slate-200/60">
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="px-3.5 py-1.5 rounded-full bg-slate-900 text-white text-xs font-bold uppercase tracking-wider mb-4 inline-block shadow-sm">
+          Contact Direct
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-3">Contactez Kreatix Studio</h2>
+        <p class="text-slate-600 text-base font-medium">
+          Expliquez-nous votre projet ou votre besoin directement par e-mail, nous vous répondrons sous 24 à 48 heures.
         </p>
       </div>
 
-      <% if flash[:notice] %>
-        <div class="mb-8 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-800 text-center font-medium">
-          <%= flash[:notice] %>
+      <div class="p-10 md:p-14 rounded-3xl bg-white/90 border border-white backdrop-blur-2xl shadow-2xl text-center flex flex-col items-center space-y-6">
+        <div class="w-20 h-20 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-3xl shadow-xl">
+          ✨
         </div>
-      <% end %>
 
-      <div class="p-8 md:p-10 rounded-2xl bg-white border border-slate-200 shadow-sm">
-        <%= form_with url: contact_kreatix_submit_path, method: :post, local: true, class: "space-y-6" do |f| %>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Nom / Entreprise</label>
-              <%= text_field_tag :name, nil, required: true, placeholder: "Votre nom", class: "w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-slate-900 focus:outline-none text-slate-900" %>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Adresse Email</label>
-              <%= email_field_tag :email, nil, required: true, placeholder: "contact@entreprise.com", class: "w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-slate-900 focus:outline-none text-slate-900" %>
-            </div>
-          </div>
+        <div class="space-y-2 max-w-lg">
+          <h3 class="text-2xl font-bold text-slate-900">Demande de devis & d'informations</h3>
+          <p class="text-slate-600 text-sm leading-relaxed font-medium">
+            Cliquez ci-dessous pour ouvrir votre messagerie et nous faire part de vos idées ou cahier des charges.
+          </p>
+        </div>
 
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Type de prestation / Offre souhaitée</label>
-            <%= select_tag :service, options_for_select([['Site Vitrine (Essentiel)', 'Vitrine'], ['Application SaaS / MVP (Avancé)', 'SaaS'], ['Sur-Mesure & Support', 'Support'], ['Autre demande', 'Autre']]), class: "w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-slate-900 focus:outline-none text-slate-900 bg-white" %>
-          </div>
+        <a href="mailto:studiokreatix@gmail.com?subject=Demande%20de%20devis%20-%20Kreatix%20Studio" 
+           class="inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-lg transition-all duration-200 shadow-xl shadow-slate-900/20 hover:scale-[1.02]">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <span>studiokreatix@gmail.com</span>
+        </a>
 
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Description de votre besoin</label>
-            <%= text_area_tag :message, nil, rows: 4, required: true, placeholder: "Décrivez brièvement votre projet ou votre budget...", class: "w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-slate-900 focus:outline-none text-slate-900 resize-none" %>
-          </div>
-
-          <button type="submit" class="w-full py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold shadow-md transition-all">
-            Envoyer ma demande 
-          </button>
-        <% end %>
+        <div class="pt-2 flex items-center space-x-2 text-xs text-slate-500 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Accompagnement personnalisé & réponse rapide</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 bg-white border-t border-slate-200 text-center text-sm text-slate-500">
+  <footer class="py-8 bg-white/80 border-t border-slate-200/80 text-center text-sm text-slate-500 relative z-10 backdrop-blur-md">
     <p>© <%= Time.now.year %> Kreatix Studio (studiokreatix@gmail.com). Tous droits réservés.</p>
   </footer>
 

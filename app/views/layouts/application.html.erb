@@ -8,15 +8,14 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="description" content="Développeur Web & Mobile Ruby on Rails, fondateur de Kreatix Studio. Découvrez mes réalisations SaaS et mon parcours.">
 
-    <!-- Meta balises Open Graph pour LinkedIn, WhatsApp, Facebook -->
+    <!-- Meta balises Open Graph -->
     <meta property="og:title" content="Ahmed SALAH - Portfolio & Fondateur de Kreatix Studio" />
     <meta property="og:description" content="Développeur Web & Mobile Ruby on Rails. Découvrez mes projets, SaaS et mon parcours." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ahmedsalah.fr" />
-    <!-- Utilise ton logo ou ta photo de profil comme aperçu -->
     <meta property="og:image" content="<%= image_url('profile.jpg') %>" />
 
-    <!-- Meta balises pour Twitter -->
+    <!-- Meta balises Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ahmed SALAH - Portfolio & Fondateur de Kreatix Studio">
     <meta name="twitter:description" content="Développeur Web & Mobile Ruby on Rails. Découvrez mes projets, SaaS et mon parcours.">
@@ -27,7 +26,7 @@
 
     <%= yield :head %>
 
-    <!-- Ajout du CDN Tailwind -->
+    <!-- CDN Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="icon" href="/icon.png" type="image/png">
@@ -38,7 +37,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-slate-950 text-slate-100">
+  <body class="bg-slate-950 text-slate-100" data-turbo="false">
     <%= yield %>
   </body>
 </html>
